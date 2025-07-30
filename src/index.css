@@ -150,6 +150,27 @@
     100% { transform: translateY(-10px); }
   }
   
+  @keyframes driveAcross {
+    0% { 
+      transform: translateX(-120px);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% { 
+      transform: translateX(calc(100vw + 120px));
+      opacity: 0;
+    }
+  }
+  
+  .animate-drive-across {
+    animation: driveAcross 15s linear infinite;
+  }
+  
   /* Navigation Components */
   .nav-glass {
     background: rgba(0, 0, 0, 0.1);

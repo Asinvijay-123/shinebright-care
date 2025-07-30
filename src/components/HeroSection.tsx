@@ -27,6 +27,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage }) => {
         </h1>
       </div>
 
+      {/* Moving Car Animation */}
+      <div className="absolute bottom-20 left-0 w-full pointer-events-none overflow-hidden">
+        <div className="animate-drive-across">
+          <svg 
+            width="80" 
+            height="40" 
+            viewBox="0 0 120 60" 
+            className="fill-white opacity-80"
+          >
+            {/* Simple car silhouette */}
+            <path d="M20 40 L20 35 Q20 30 25 30 L35 30 Q40 25 45 25 L75 25 Q80 25 85 30 L95 30 Q100 30 100 35 L100 40 L95 40 Q95 45 90 45 Q85 45 85 40 L35 40 Q35 45 30 45 Q25 45 25 40 Z"/>
+            <circle cx="30" cy="42" r="6" className="fill-gray-400"/>
+            <circle cx="90" cy="42" r="6" className="fill-gray-400"/>
+            <rect x="45" y="30" width="30" height="8" rx="2" className="fill-gray-600"/>
+          </svg>
+        </div>
+      </div>
+
       {/* Decorative Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 pointer-events-none"></div>
       

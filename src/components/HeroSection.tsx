@@ -30,21 +30,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage }) => {
       {/* Moving Car Animation */}
       <div className="absolute bottom-20 left-0 w-full pointer-events-none overflow-hidden">
         <div className="animate-drive-across">
-          <svg 
-            width="240" 
-            height="120" 
-            viewBox="0 0 120 60" 
-            className="fill-white opacity-90 drop-shadow-lg"
-          >
-            {/* Enhanced car silhouette */}
-            <path d="M20 40 L20 35 Q20 30 25 30 L35 30 Q40 25 45 25 L75 25 Q80 25 85 30 L95 30 Q100 30 100 35 L100 40 L95 40 Q95 45 90 45 Q85 45 85 40 L35 40 Q35 45 30 45 Q25 45 25 40 Z"/>
-            <circle cx="30" cy="42" r="6" className="fill-gray-300"/>
-            <circle cx="90" cy="42" r="6" className="fill-gray-300"/>
-            <circle cx="30" cy="42" r="3" className="fill-gray-600"/>
-            <circle cx="90" cy="42" r="3" className="fill-gray-600"/>
-            <rect x="45" y="30" width="30" height="8" rx="2" className="fill-blue-200"/>
-            <rect x="50" y="32" width="20" height="4" rx="1" className="fill-blue-400"/>
-          </svg>
+          <img 
+            src="/lovable-uploads/2694da83-9a76-4cb1-a061-f7ce8c0c4ff6.png"
+            alt="Moving Car"
+            className="w-[720px] h-[360px] object-contain drop-shadow-2xl opacity-90"
+          />
         </div>
       </div>
 

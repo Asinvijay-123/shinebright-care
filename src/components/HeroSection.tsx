@@ -31,8 +31,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage }) => {
       <div className="absolute bottom-20 left-0 w-full pointer-events-none overflow-hidden">
         <div className="animate-drive-across">
           <svg 
-            width="160" 
-            height="80" 
+            width="240" 
+            height="120" 
             viewBox="0 0 120 60" 
             className="fill-white opacity-90 drop-shadow-lg"
           >

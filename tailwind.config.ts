@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					dark: 'hsl(var(--primary-dark))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,7 +62,40 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Car Care Brand Colors
+				surface: {
+					light: 'hsl(var(--surface-light))',
+					medium: 'hsl(var(--surface-medium))',
+					dark: 'hsl(var(--surface-dark))'
+				},
+				text: {
+					light: 'hsl(var(--text-light))',
+					medium: 'hsl(var(--text-medium))',
+					dark: 'hsl(var(--text-dark))'
+				},
+				success: 'hsl(var(--success))',
+				warning: 'hsl(var(--warning))'
+			},
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+				'montserrat': ['Montserrat', 'sans-serif']
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'elevation-1': 'var(--shadow-sm)',
+				'elevation-2': 'var(--shadow-md)',
+				'elevation-3': 'var(--shadow-lg)'
+			},
+			transitionDuration: {
+				'fast': '150ms',
+				'smooth': '300ms',
+				'slow': '500ms'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -1,58 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Car Care Design System - Professional & Modern */
 @layer base {
   :root {
+    /* Core Brand Colors */
+    --primary: 88 50% 53%; /* Car Care Green #8BC34A */
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 88 50% 43%; /* Darker green for hover states */
+    
+    /* Neutral Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 222 84% 5%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
+    --card-foreground: 222 84% 5%;
+    
+    /* Surface Colors */
+    --surface-light: 0 0% 98%;
+    --surface-medium: 220 13% 91%;
+    --surface-dark: 222 84% 5%;
+    
+    /* Text Colors */
+    --text-light: 0 0% 80%;
+    --text-medium: 215 16% 47%;
+    --text-dark: 222 84% 5%;
+    
+    /* Accent Colors */
+    --accent: 88 50% 53%;
+    --accent-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --warning: 45 93% 58%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Interactive States */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 88 50% 53%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(88 50% 53%), hsl(88 50% 43%));
+    --gradient-hero: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 40px hsla(88, 50%, 53%, 0.3);
+    
+    /* Animations */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Spacing & Sizing */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* Dark mode overrides */
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 88 50% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 88 50% 53%;
   }
 
   .dark {
@@ -100,6 +124,92 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-['Inter'];
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Montserrat'];
+  }
+}
+
+@layer components {
+  /* Hero Section Animations */
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-bounce-gentle-delayed {
+    animation: bounceGentle 2s ease-in-out infinite alternate;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes bounceGentle {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+  }
+  
+  /* Navigation Components */
+  .nav-glass {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold;
+    @apply hover:bg-primary/90 transition-all duration-300;
+    @apply shadow-md hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-white text-white px-6 py-3 rounded-lg font-semibold;
+    @apply hover:bg-white hover:text-primary transition-all duration-300;
+  }
+  
+  .btn-card {
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold text-sm;
+    @apply hover:bg-primary/90 transition-all duration-300;
+  }
+  
+  /* Card Components */
+  .card-elevated {
+    @apply bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply hover:-translate-y-1;
+  }
+  
+  .card-glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    @apply rounded-xl shadow-lg;
+  }
+  
+  /* Text Shadows for Readability */
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .text-shadow-light {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Progress Bar Animation */
+  .progress-animated {
+    transition: width 1s ease-in-out;
+  }
+  
+  /* Floating Elements */
+  .float-whatsapp {
+    @apply fixed bottom-6 right-6 bg-[#25D366] text-white p-3 rounded-full;
+    @apply shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply hover:scale-110 z-50;
+  }
+  
+  @media (max-width: 768px) {
+    .float-whatsapp {
+      @apply bottom-4 left-1/2 transform -translate-x-1/2 rounded-full px-4 py-2;
+    }
   }
 }

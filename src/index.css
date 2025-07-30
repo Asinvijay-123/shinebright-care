@@ -167,8 +167,41 @@
     }
   }
   
+  @keyframes driftAcross {
+    0% { 
+      transform: translateX(-480px) rotate(0deg);
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    40% {
+      transform: translateX(calc(50vw - 480px)) rotate(0deg);
+    }
+    50% {
+      transform: translateX(calc(50vw - 480px)) rotate(-15deg);
+    }
+    60% {
+      transform: translateX(calc(50vw - 480px)) rotate(15deg);
+    }
+    70% {
+      transform: translateX(calc(50vw - 480px)) rotate(0deg);
+    }
+    85% {
+      opacity: 1;
+    }
+    100% { 
+      transform: translateX(calc(100vw + 480px)) rotate(0deg);
+      opacity: 0;
+    }
+  }
+  
   .animate-drive-across {
     animation: driveAcross 15s linear infinite;
+  }
+  
+  .animate-drift-across {
+    animation: driftAcross 20s ease-in-out infinite;
   }
   
   /* Navigation Components */

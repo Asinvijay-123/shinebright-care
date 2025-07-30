@@ -29,11 +29,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage }) => {
 
       {/* Moving Car Animation */}
       <div className="absolute bottom-20 left-0 w-full pointer-events-none overflow-hidden">
-        <div className="animate-drive-across">
+        <div className="animate-drift-across">
           <img 
             src="/lovable-uploads/2694da83-9a76-4cb1-a061-f7ce8c0c4ff6.png"
-            alt="Moving Car"
-            className="w-[720px] h-[360px] object-contain drop-shadow-2xl opacity-90"
+            alt="Drifting Car"
+            className="w-[960px] h-[480px] object-contain drop-shadow-2xl opacity-95"
           />
         </div>
       </div>
